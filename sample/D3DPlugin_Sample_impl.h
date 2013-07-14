@@ -43,7 +43,7 @@ protected:
                 {
                     CryLog( "zomg m_GPUMesh.init", 0 );
                     bMeshCanBeCreated = true;
-                    //m_poGPUMesh->init();
+                    //m_poGPUMesh->init();//CryEngine Fatal Error: CRNTmpData should only be allocated and free'd on main thread.
                     bExecuted = true;
                 }
             }

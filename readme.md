@@ -29,11 +29,11 @@ Changes in the gamecode
 	#include <IPluginManager.h>
 	#include "../Plugin_D3D/sample/IPluginInterfaces.h"
 ```
-* Call update func in Game.cpp
+* Call update func in Game.cpp (at the beginning of Update(bool haveFocus, unsigned int updateFlags) function)
 ```C++
-    pluginInterfaces::IPluginInterfaces* pPluginInterfaces = 0;
-    pPluginInterfaces = PluginManager::safeGetPluginConcreteInterface<pluginInterfaces::IPluginInterfaces*>("D3D");
-    pPluginInterfaces->Update();
+	pluginInterfaces::IPluginInterfaces* pPluginInterfaces = 0;
+	pPluginInterfaces = PluginManager::safeGetPluginConcreteInterface<pluginInterfaces::IPluginInterfaces*>("D3D");
+	pPluginInterfaces->Update();
 ```
 
 
