@@ -20,6 +20,23 @@ C++ Integration
 ====================================================================
 Follow these steps to integrate the D3D Plugin into your Plugin or GameDLL.
 
+Changes in the gamecode
+----------------
+
+* https://github.com/hendrikp/Plugin_SDK/wiki/GameDLL-Integration
+* Add includes in Game.cpp
+```C++
+	#include <IPluginManager.h>
+	#include "../Plugin_D3D/sample/IPluginInterfaces.h"
+```
+* Call update func in Game.cpp
+```C++
+    pluginInterfaces::IPluginInterfaces* pPluginInterfaces = 0;
+    pPluginInterfaces = PluginManager::safeGetPluginConcreteInterface<pluginInterfaces::IPluginInterfaces*>("D3D");
+    pPluginInterfaces->Update();
+```
+
+
 Repository Setup
 ----------------
 * Clone the repository to your local machine to your Code directory e.g. ```C:\cryengine3_3.4.0\Code```.

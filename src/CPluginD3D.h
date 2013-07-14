@@ -10,6 +10,8 @@
 
 #include <IPluginD3D.h>
 
+#include ".\..\sample\D3DPlugin_Sample_impl.h"
+
 #define PLUGIN_NAME "D3D"
 #define PLUGIN_CONSOLE_PREFIX "[" PLUGIN_NAME " " PLUGIN_TEXT "] " //!< Prefix for Logentries by this plugin
 
@@ -81,6 +83,8 @@ namespace D3DPlugin
     {
         private:
             IPluginD3DEx* m_pDXSystem;
+            CMyD3D* m_pMyD3D;
+            bool bCreated;
 
         public:
             CPluginD3D();

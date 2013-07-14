@@ -5,8 +5,8 @@
 #pragma once
 
 /**
-* @brief D3D Plugin Namespace
-*/
+ * @brief D3D Plugin Namespace
+ */
 namespace D3DPlugin
 {
     enum eD3DType
@@ -26,13 +26,13 @@ namespace D3DPlugin
     };
 
     /**
-    * @brief plugin D3D concrete interface
-    */
+     * @brief plugin D3D concrete interface
+     */
     struct IPluginD3D
     {
         /**
-        * @brief Get Plugin base interface
-        */
+         * @brief Get Plugin base interface
+         */
         virtual PluginManager::IPluginBase* GetBase() = 0;
 
         virtual void ActivateEventDispatcher( bool bActivate = true ) = 0;

@@ -1,1 +1,2 @@
-Hendrik Polczynski <hendrikpolczyn at gmail dot com>
+Hendrik Polczynski <hendrikpolczyn at gmail dot com> (base implementation)
+Oskar Osobniak     <oskar.osobniak at gmail dot com> (changes)

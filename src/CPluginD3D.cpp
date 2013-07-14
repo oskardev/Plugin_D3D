@@ -13,6 +13,7 @@ namespace D3DPlugin
     CPluginD3D::CPluginD3D()
     {
         gPlugin = this;
+        bCreated = false;
     }
 
     CPluginD3D::~CPluginD3D()
@@ -49,6 +50,8 @@ namespace D3DPlugin
 
     bool CPluginD3D::Init( SSystemGlobalEnvironment& env, SSystemInitParams& startupParams, IPluginBase* pPluginManager, const char* sPluginDirectory )
     {
+        gPlugin->LogAlways( "CPluginD3D: starting Init", 0 );
+
         gPluginManager = ( PluginManager::IPluginManager* )pPluginManager->GetConcreteInterface( NULL );
         CPluginBase::Init( env, startupParams, pPluginManager, sPluginDirectory );
 
@@ -68,6 +71,8 @@ namespace D3DPlugin
         }
 
 #endif
+
+        m_pMyD3D = new CMyD3D;
 
         if ( !m_pDXSystem )
         {
